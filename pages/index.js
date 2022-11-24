@@ -25,7 +25,7 @@ const Home = () => {
     <div className="flex items-center min-h-screen">
         <div className="container">
         <div className="flex justify-center gap-4">
-          <Card item={dataCard} />
+          <Card key={dataCard.id} item={dataCard} />
           <div className="max-w-[200px] flex flex-col gap-2">
             {data.map((item) => (
               <Button
