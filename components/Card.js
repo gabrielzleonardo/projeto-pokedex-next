@@ -3,10 +3,10 @@ import Image from "next/image";
 const Card = ({ item }) => {
   return (
     //cartão pokemon
-    <div className="border border-none rounded-md overflow-hidden bg-white shadow-lg pb-12 w-[400px]">
+    <div className="border border-none rounded-md overflow-hidden bg-white shadow-lg pb-12 w-full sm:w-[400px]">
       {/* cartão topo */}
-      <div style={{ background: item.bg }} className=" aspect-square w-[400px]">
-        <div className="flex gap-4 justify-between items-center px-6 pt-7">
+      <div style={{ background: item.bg }} className=" h-[365px]">
+        <div className="flex gap-4 justify-between items-center px-4 pt-3 sm:px-6 pt-7">
           <h2 className="font-bold text-white text-[24px]">{item.name}</h2>
           <span className="text-white text-[16px]">{item.id}</span>
         </div>
@@ -18,8 +18,8 @@ const Card = ({ item }) => {
       </div>
       {/* cartão de informações */}
       <div className="">
-      <div className="-mt-[285PX] flex justify-center">
-          <Image className="aspect-square"
+      <div className="-mt-[305px] flex justify-center sm:-mt-[285PX]">
+          <Image className="aspect-square w-[415px]"
             src={item.photo}
             alt={`imagem de um ${item.name}`}
             width={350}

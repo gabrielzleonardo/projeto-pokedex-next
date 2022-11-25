@@ -8,7 +8,6 @@ const Home = () => {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [dataCard, setDataCard] = useState(null);
-  const [cardActive, setCardActive] = useState(false);
   useEffect(() => {
     setLoading(true);
     fetch("/api/list")
@@ -24,9 +23,9 @@ const Home = () => {
   return (
     <div className="flex items-center min-h-screen">
         <div className="container">
-        <div className="flex justify-center gap-4">
-          <Card key={dataCard.id} item={dataCard} />
-          <div className="max-w-[200px] flex flex-col gap-2">
+        <div className="flex justify-center gap-4 flex-col m-[40px] sm:flex-row">
+          <Card key={dataCard.id} item={dataCard}/>
+          <div className="grid grid-cols-2 sm:flex sm:max-w-[200px] sm:flex-col gap-2">
             {data.map((item) => (
               <Button
                 key={item.name}
