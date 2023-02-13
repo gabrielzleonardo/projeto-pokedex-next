@@ -22,9 +22,9 @@ const Home = () => {
   if (!data) return <p>No profile data</p>;
   return (
     <div className="flex items-center min-h-screen">
-        <div className="container">
+      <div className="container">
         <div className="flex justify-center gap-4 flex-col m-[40px] sm:flex-row">
-          <Card key={dataCard.id} item={dataCard}/>
+          <Card key={dataCard.id} item={dataCard} />
           <div className="grid grid-cols-2 sm:flex sm:max-w-[200px] sm:flex-col gap-2">
             {data.map((item) => (
               <Button
@@ -32,7 +32,6 @@ const Home = () => {
                 item={item}
                 handleClick={(dataPokemon) => setDataCard(dataPokemon)}
                 cardActiveId={dataCard.id}
-                
               />
             ))}
           </div>
